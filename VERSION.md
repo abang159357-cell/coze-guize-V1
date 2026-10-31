@@ -9,8 +9,8 @@
 | 仓库 | `abang159357-cell/coze-guize-V1` |
 | 协议别名 | `V13` |
 | 协议权威源 | `core/通用研发协议.md` |
-| 记录 commit | `82d56c8`（结构重组提交）｜上一基线 `28470f9`（旧 coze-guize） |
-| 结构版本 | 本仓库重组为「五层结构」（core/workflows/checklists/templates/references + INDEX/VERSION/工作习惯/规范验证）所在 commit：`82d56c8` |
+| 记录 commit | `2dcb6f4`（当前正式基线）｜上一基线 `82d56c8`（结构重组提交）；结构重组前 `28470f9`（旧 coze-guize） |
+| 结构版本 | 本仓库重组为「五层结构」（core/workflows/checklists/templates/references + INDEX/VERSION/工作习惯/规范验证）所在 commit：`82d56c8`（结构重组后内容变更以「记录 commit」为准） |
 
 > 每次结构性变更、协议条款调整、文件迁移后，在此记录新 commit，并同步 `INDEX.md` 中的引用路径与 `AGENTS.md` 目录树。
 
@@ -62,6 +62,8 @@ core/通用研发协议.md  ◄── 权威源
 
 | 日期 | commit | 变更内容 | 影响 | 
 |---|---|---|---|
-| <本次-沉淀两项目通用内容> | <本批提交后回填> | 从 `coze-shenghuopindao`（`dev-general-rules` + `ai-collab-protocol` + `docs/ci-security-baseline` + `AGENTS.md` 可复用纪律）与 `arcade-meter-bot-test`（无通用内容）提取通用方法，沉淀为 `references/依赖与CI治理.md`（依赖告警处置/升级验证/技术债防护/交付硬闸门/发布探针铁律/E2E范式/CI安全基线/上线前环境变量核对）；并在 `core/通用研发协议.md` §六.7、`checklists/上线前后检查.md` §36、`INDEX.md`/`README.md`/`workflows/Git与CI.md` 加索引与精简引用 | `references/依赖与CI治理.md`（新增）、`core/通用研发协议.md`、`checklists/上线前后检查.md`、`INDEX.md`、`README.md`、`workflows/Git与CI.md`，见「文件依赖关系」 |
-| <本次-仓库名统一> | <本批提交后回填> | 统一全仓仓库名：`coze-guide`（拼写错误）与作为接入对象的 `coze-guize` 一律改为 `coze-guize-V1`（仅保留"旧 coze-guize"对比说明） | `AGENTS.md`/`VERSION.md`/`references/官方依据.md`/`templates/项目接入.md`，见「文件依赖关系」 |
-| <本次-结构重组> | `82d56c8` | 旧 `coze-guize` 内容重组为 `coze-guize-V1` 五层结构（上一基线 `28470f9`） | 见本文件「文件依赖关系」 |
+| 2026-11-01 | `9be18e7` | 从 `coze-shenghuopindao`（`dev-general-rules` + `ai-collab-protocol` + `docs/ci-security-baseline` + `AGENTS.md` 可复用纪律）与 `arcade-meter-bot-test`（无通用内容）提取通用方法，沉淀为 `references/依赖与CI治理.md`（依赖告警处置/升级验证/技术债防护/交付硬闸门/发布探针铁律/E2E范式/CI安全基线/上线前环境变量核对）；并在 `core/通用研发协议.md` §六.7、`checklists/上线前后检查.md` §36、`INDEX.md`/`README.md`/`workflows/Git与CI.md` 加索引与精简引用 | `references/依赖与CI治理.md`（新增）、`core/通用研发协议.md`、`checklists/上线前后检查.md`、`INDEX.md`、`README.md`、`workflows/Git与CI.md`，见「文件依赖关系」 |
+| 2026-11-01 | `260e4c9` | 统一全仓仓库名：`coze-guide`（拼写错误）与作为接入对象的 `coze-guize` 一律改为 `coze-guize-V1`（仅保留"旧 coze-guize"对比说明） | `AGENTS.md`/`VERSION.md`/`references/官方依据.md`/`templates/项目接入.md`，见「文件依赖关系」 |
+| 2026-11-01 | `048c659` | 对上一批沉淀做复查自检收口：核对 `references/依赖与CI治理.md` 对源仓库 `coze-shenghuopindao` 三份可复用文件的覆盖完整性（ai-collab-protocol 六章↔§一~六、ci-security-baseline↔§七、上线配置清单核对法↔§八），剔除项目专属内容 | `references/依赖与CI治理.md` 及全仓交叉引用，见「文件依赖关系」 |
+| 2026-11-01 | `2dcb6f4` | 修正 `templates/AGENTS.md.template` 中残留的旧文件名引用（`推送与CI交接.md`→`Git与CI.md`、`上线前规定.md`→`上线前后检查.md`、`_依据核实.md`→`官方依据.md`） | `templates/AGENTS.md.template` |
+| 2026-11-01 | `2dcb6f4`后续（本次） | ①更新当前基线至 `2dcb6f4`（此前误记为 `82d56c8`，导致与真实版本不一致）；②回填变更记录占位符；③裁定接入哲学为「固定基线」，删除 `AGENTS.md.template`/`项目接入.md` 中"完整版见仓库并按最新版执行"的双轨表述 | `VERSION.md`、`templates/AGENTS.md.template`、`templates/项目接入.md` |
