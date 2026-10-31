@@ -77,6 +77,16 @@ logs/
 *.gz
 
 # 文档类也默认加入
+
+# 图片/截图/临时附件一律不进 git（长期约束，切勿移除）
+assets/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.bmp
+*.svg
 *.pdf
 *.docx
 *.doc
@@ -86,6 +96,19 @@ logs/
 *.pptx
 *.xlsx
 *.csv
+
+# 截图 / 图片 / 临时附件一律不进 git（长期约束，含未 push 历史，遗漏务必补记）
+assets/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.bmp
+
+# 计划文档例外（不随规范入库）
+!.cozeproj/reduction/
 
 # Preview files
 .preview
