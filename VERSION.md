@@ -59,6 +59,24 @@ core/通用研发协议.md  ◄── 权威源
 - 后续协议变更须经项目所有者确认后升版本号，登记处同步更新，不自动覆盖既有基线
 ```
 
+## 变更必须同步项（每次改规则后逐项过，防跨层失同步）
+
+> 单一权威源承诺靠"改一处、同步其余"落地。任何改动（尤其动 `core/通用研发协议.md`、`INDEX.md`、`README.md`、`AGENTS.md`、`references/` 引用）后，按下表逐项核对；无法同步的在本次变更影响栏写明"无需同步 + 原因"，不留默认的空洞。
+
+| 变更类型 | 必须同步 | 校验方法 |
+|---|---|---|
+| 改动核心协议条文 | 本条同步进 `INDEX.md`（情况→文件→协议节→checklist 映射）、`README.md`（主线段落如有引用）、`AGENTS.md`（仓库自身记忆）、`references/官方依据.md`（如有官方依据）、本变更记录、目标项目 `AGENTS.md` 基线需项目所有者确认 | `python3 scripts/verify-references.py` + 人工核对映射 |
+| 增删改文件 / 改路径 | `INDEX.md`、`README.md` 目录树、`AGENTS.md` 目录树、本变更记录 | `scripts/verify-references.py` 检出死链 |
+| 改动引用 / 重组引用 | `INDEX.md`、`README.md`、`AGENTS.md`、受影响文件、本变更记录 | `scripts/verify-references.py` |
+| 新增/修改证据 | `references/官方依据.md`（更新核实基准 commit/日期）、本变更记录 | 人工 + 复核周期 |
+
+### 协议变更后的回归要求
+
+1. 协议 (或任一被引用文件) 变更后，先按「**文件依赖关系**」识别影响范围。
+2. 使受影响范围内的既有验证结论失效（见 `规范验证.md`「证据绑定版本」）。
+3. 对失效范围跑一次 `python3 scripts/verify-references.py` **必过**，再做定向人工回归（`规范验证.md`「受控验证场景」选 2~3 个相关项）。
+4. 所有回归结果记入 `规范验证.md`「结论记录」并绑定 commit，**不以"已改文档"当"已验证"**。
+
 ## 变更记录
 
 | 日期 | commit | 变更内容 | 影响 | 
@@ -69,3 +87,4 @@ core/通用研发协议.md  ◄── 权威源
 | 2026-11-01 | `2dcb6f4` | 修正 `templates/AGENTS.md.template` 中残留的旧文件名引用（`推送与CI交接.md`→`Git与CI.md`、`上线前规定.md`→`上线前后检查.md`、`_依据核实.md`→`官方依据.md`） | `templates/AGENTS.md.template` |
 | 2026-11-01 | `2dcb6f4`后续（本次） | ①更新当前基线至 `2dcb6f4`（此前误记为 `82d56c8`，导致与真实版本不一致）；②回填变更记录占位符；③裁定接入哲学为「固定基线」，删除 `AGENTS.md.template`/`项目接入.md` 中"完整版见仓库并按最新版执行"的双轨表述 | `VERSION.md`、`templates/AGENTS.md.template`、`templates/项目接入.md` |
 | 2026-11-01 | `32f71e1` | 审查整改三处：①`references/平台专项规则.md` 占位降级（`[DRAFT-待补]`，未定稿不视为现行规则，验证记录表 `（示例）`→`（待填）`）②`references/官方依据.md` 增加「核实基准与复核周期」（锚定 commit、日期）③新增 `scripts/verify-references.py` 引用有效性校验并登记进 `规范验证.md` | `references/平台专项规则.md`、`references/官方依据.md`、`scripts/verify-references.py`（新增）、`规范验证.md`、`VERSION.md` |
+| 2026-11-01 | 本次 | **定位校准 + 结构与回归机制加固**：A①官方依据"两部分→五分类"表述对齐（含结论可信度层级语境）；A②README/AGENTS 增「定位声明」与「局限」（明确=模板库+平台实践，非官方标准/不构成对外正式制度）；A③`规范验证.md` 补「结论记录」表（目标/步骤/结果/失败原因/commit）+ 失败记录优先原则；B④协议「四件事分开」总纲 + 标签即证据归属；B⑤VERSION 增「变更必须同步项清单 + 协议变更回归要求」 | `references/官方依据.md`、`README.md`、`AGENTS.md`、`规范验证.md`、`core/通用研发协议.md`、`VERSION.md` |

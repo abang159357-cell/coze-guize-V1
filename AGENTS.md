@@ -1,7 +1,7 @@
 # AGENTS.md
 
 ## 项目概述
-跨项目复用的通用研发协作规范仓库（coze-guize-V1）。无业务代码，是一套「稳定、可信、可长期运营」的研发规则底座。结构为五层：core（规则权威源）/ workflows（流程框架）/ checklists（强制闸门）/ templates（可复制模板）/ references（参考依据）+ 顶层 INDEX/VERSION/工作习惯/规范验证。其他项目初始化时参阅本仓库接入各自 AGENTS.md。
+跨项目复用的 AI 协作规范模板库 + 平台实践沉淀库（coze-guize-V1）。无业务代码，是一套可裁剪、可版本追踪、可长期维护的研发规则底座——**定位是"团队内规范模板 / AI 协作引导 / 流程参考"，不是官方标准、不构成对外正式制度**（借用的官方机制与平台硬约束依官方口径，见 `references/官方依据.md`）。结构为五层：core（规则权威源）/ workflows（流程框架）/ checklists（强制闸门）/ templates（可复制模板）/ references（参考依据）+ 顶层 INDEX/VERSION/工作习惯/规范验证。其他项目初始化时参阅本仓库接入各自 AGENTS.md。
 
 ## 技术栈
 无技术栈、无源码、无运行入口、无依赖、无构建产物。纯 Markdown + 模板文件。
