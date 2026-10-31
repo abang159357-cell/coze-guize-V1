@@ -15,7 +15,7 @@
 | workflows | `workflows/` | 各阶段流程路标（做什么 + 读协议哪节 + 用哪份checklist） | 处于对应开发阶段 |
 | checklists | `checklists/` | 强制检查闸门（可逐条勾选） | 交付前 / 上线前 |
 | templates | `templates/` | 可直接复制的骨架 | 建 AGENTS.md / 执行计划 / 接入 / 交付报告 |
-| references | `references/` | 官方依据 / 平台专项规则 | 溯源 / 涉及平台能力 |
+| references | `references/` | 官方依据 / 平台专项规则 / 依赖与CI治理 | 溯源 / 涉及平台能力 / 依赖告警与CI安全 |
 | 顶层 | `工作习惯.md` | 用户长期偏好常用规则 | 接入新项目时复制进 AGENTS.md |
 | 顶层 | `规范验证.md` | 元治理：验证规则是否真被读取执行 | 检查本体系本身是否生效 |
 
@@ -30,6 +30,7 @@
 | 交付前自检 | `checklists/交付前检查.md` | 协议§四 |
 | 上线前评估 / 确认能否上线 | `checklists/上线前后检查.md` | 协议§五 |
 | 推送 GitHub / 触发 CI | `workflows/Git与CI.md` | 协议§十.7 |
+| 依赖告警处置 / 升级验证 / CI安全 | `references/依赖与CI治理.md` | — |
 | 对接外部能力 / 选技能 | — | 协议§七 |
 | 验证规则本身是否生效 | `规范验证.md` | — |
 
@@ -39,7 +40,7 @@
 |---|---|---|
 | ① 立项 / ② 计划定案 | `workflows/需求与计划.md`、`templates/执行计划.md.template` | 交付前检查（若改文件） |
 | ③ 开发 / 测试 / 排障 | `workflows/开发测试与排障.md`、`core/任务执行与恢复.md` | 交付前检查 |
-| ④ 推送 + CI | `workflows/Git与CI.md` | — |
+| ④ 推送 + CI | `workflows/Git与CI.md`、`references/依赖与CI治理.md` | — |
 | ⑤ 交付 / ⑥ 上线 / ⑦ 部署 / ⑧ 维护 | `workflows/交付上线与维护.md` | 交付前检查 + 上线前后检查 |
 
 ## 遇到的问题 → 去哪里找
@@ -53,6 +54,8 @@
 | 沙箱断了怎么恢复 | `core/任务执行与恢复.md`「中断恢复」 |
 | 想确认当前仓库版本 | `VERSION.md` |
 | 平台能力是否真实存在 | `references/平台专项规则.md`（标注"实测/官方取证"） |
+| 依赖告警怎么处置 / CI 安全基线 | `references/依赖与CI治理.md` |
+| 发布后跳钻页 / 用户旅程验证 | `references/依赖与CI治理.md`（§五/六 E2E范式） |
 
 ## 使用规则
 

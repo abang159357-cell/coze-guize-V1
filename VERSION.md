@@ -62,5 +62,6 @@ core/通用研发协议.md  ◄── 权威源
 
 | 日期 | commit | 变更内容 | 影响 | 
 |---|---|---|---|
+| <本次-沉淀两项目通用内容> | <本批提交后回填> | 从 `coze-shenghuopindao`（`dev-general-rules` + `ai-collab-protocol` + `docs/ci-security-baseline` + `AGENTS.md` 可复用纪律）与 `arcade-meter-bot-test`（无通用内容）提取通用方法，沉淀为 `references/依赖与CI治理.md`（依赖告警处置/升级验证/技术债防护/交付硬闸门/发布探针铁律/E2E范式/CI安全基线/上线前环境变量核对）；并在 `core/通用研发协议.md` §六.7、`checklists/上线前后检查.md` §36、`INDEX.md`/`README.md`/`workflows/Git与CI.md` 加索引与精简引用 | `references/依赖与CI治理.md`（新增）、`core/通用研发协议.md`、`checklists/上线前后检查.md`、`INDEX.md`、`README.md`、`workflows/Git与CI.md`，见「文件依赖关系」 |
 | <本次-仓库名统一> | <本批提交后回填> | 统一全仓仓库名：`coze-guide`（拼写错误）与作为接入对象的 `coze-guize` 一律改为 `coze-guize-V1`（仅保留"旧 coze-guize"对比说明） | `AGENTS.md`/`VERSION.md`/`references/官方依据.md`/`templates/项目接入.md`，见「文件依赖关系」 |
 | <本次-结构重组> | `82d56c8` | 旧 `coze-guize` 内容重组为 `coze-guize-V1` 五层结构（上一基线 `28470f9`） | 见本文件「文件依赖关系」 |
