@@ -24,6 +24,7 @@ core/通用研发协议.md  ◄── 权威源
    ├── workflows/*（4份）            （阶段路标，引用协议章节）
    ├── checklists/*（2份）           （强制闸门，条款源自协议§四/§五）
    ├── templates/*                   （骨架，含协议摘要/索引）
+   ├── scripts/verify-references.py  （引用有效性校验，守护索引/交叉引用不失效）
    ├── references/官方依据.md        （协议条款的官方出处）
    ├── INDEX.md                      （导航表，引用所有以上路径）
    └── AGENTS.md / README.md         （仓库自身，含目录树与摘要）
@@ -40,12 +41,12 @@ core/通用研发协议.md  ◄── 权威源
 
 | 项 | 填空 |
 |---|---|
-| 本次变更内容 | — |
-| 影响的文件 / 模板 / 项目 | 依据「文件依赖关系」判断 |
-| 兼容性（是否破坏既有阅读/执行） | 是 / 否 / 需说明 |
-| 需重新验证的内容 | 受影响文件的 INDEX 引用、交叉引用是否仍有效 |
-| 旧项目基线是否受影响 | 是（需项目所有者确认升级）/ 否 |
-| 处理结果 / 备注 | — |
+| 本次变更内容 | ①`references/平台专项规则.md` 占位降级（`[DRAFT-待补]` 标记，未定稿不视为现行规则，验证记录表 `（示例）`→`（待填）`）②`references/官方依据.md` 增加「核实基准与复核周期」（锚定 commit、日期 2026-11-01）③新增 `scripts/verify-references.py` 引用有效性校验并登记进 `规范验证.md` |
+| 影响的文件 / 模板 / 项目 | 按「文件依赖关系」：`references/平台专项规则.md`、`references/官方依据.md`、`scripts/verify-references.py`（新增）、`规范验证.md`、`VERSION.md`，以及引用以上文件的 `INDEX.md`/`README.md`/`AGENTS.md`（本轮不改，交由校验脚本守护） |
+| 兼容性（是否破坏既有阅读/执行） | 否；新增 DRAFT 标注与校验脚本均不改变既有条款语义，仅显式化草稿边界与机器校验入口 |
+| 需重新验证的内容 | 跑 `python3 scripts/verify-references.py` 确认无死链；`INDEX.md`/`README.md`/`AGENTS.md` 对 `references/`、`scripts/` 引用是否仍有效 |
+| 旧项目基线是否受影响 | 否（本轮为草稿降级与校验增强，不改变已定稿规则基线；若要纳入旧项目基线由项目所有者确认） |
+| 处理结果 / 备注 | 校验脚本实测通过（147 条引用全有效）；待本次 commit 后回填变更记录 commit |
 
 ## 规则基线登记（新项目接入用）
 
@@ -67,3 +68,4 @@ core/通用研发协议.md  ◄── 权威源
 | 2026-11-01 | `048c659` | 对上一批沉淀做复查自检收口：核对 `references/依赖与CI治理.md` 对源仓库 `coze-shenghuopindao` 三份可复用文件的覆盖完整性（ai-collab-protocol 六章↔§一~六、ci-security-baseline↔§七、上线配置清单核对法↔§八），剔除项目专属内容 | `references/依赖与CI治理.md` 及全仓交叉引用，见「文件依赖关系」 |
 | 2026-11-01 | `2dcb6f4` | 修正 `templates/AGENTS.md.template` 中残留的旧文件名引用（`推送与CI交接.md`→`Git与CI.md`、`上线前规定.md`→`上线前后检查.md`、`_依据核实.md`→`官方依据.md`） | `templates/AGENTS.md.template` |
 | 2026-11-01 | `2dcb6f4`后续（本次） | ①更新当前基线至 `2dcb6f4`（此前误记为 `82d56c8`，导致与真实版本不一致）；②回填变更记录占位符；③裁定接入哲学为「固定基线」，删除 `AGENTS.md.template`/`项目接入.md` 中"完整版见仓库并按最新版执行"的双轨表述 | `VERSION.md`、`templates/AGENTS.md.template`、`templates/项目接入.md` |
+| 2026-11-01 | `32f71e1` | 审查整改三处：①`references/平台专项规则.md` 占位降级（`[DRAFT-待补]`，未定稿不视为现行规则，验证记录表 `（示例）`→`（待填）`）②`references/官方依据.md` 增加「核实基准与复核周期」（锚定 commit、日期）③新增 `scripts/verify-references.py` 引用有效性校验并登记进 `规范验证.md` | `references/平台专项规则.md`、`references/官方依据.md`、`scripts/verify-references.py`（新增）、`规范验证.md`、`VERSION.md` |
