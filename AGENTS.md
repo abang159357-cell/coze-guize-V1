@@ -54,7 +54,7 @@
 - 平台硬约束（端口 5000、pnpm/uv、`.coze` 落点、`sub_id` 不可改）与仓库规则冲突时以平台约束为准。
 - **图片/截图/临时附件一律不进 git（尤其在未 push 的历史里），已入库的需改写历史剥离，避免污染 commit 历史**；`.gitignore` 已固化 `assets/` 与图片后缀，遗漏时务必补记。
 - **改写 git 历史（reset --hard / 改写 commit）属高危操作，执行前必须经用户明确授权**；未 push 的本地历史改写安全，push 后禁止破坏性改写。
-- 本仓库自 `旧 coze-guide（coze-guide）` 迁移而来，旧仓库冻结不动作；本地工作区绑定 `coze-guize-V1` remote，版本以 git commit 为准（见 `VERSION.md`）。
+- 本仓库自 `旧 coze-guize` 迁移而来，旧仓库冻结不动作；本地工作区绑定 `coze-guize-V1` remote，版本以 git commit 为准（见 `VERSION.md`）。
 
 ## 常见问题和预防
 - 新项目接入本仓库规范时，应把「规则基线」（来源仓库 + 登记版本/commit）写入目标项目 AGENTS.md，协议后续变更须经项目所有者确认后才生效，不自动覆盖既有基线。

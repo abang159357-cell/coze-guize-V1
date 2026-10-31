@@ -9,8 +9,8 @@
 | 仓库 | `abang159357-cell/coze-guize-V1` |
 | 协议别名 | `V13` |
 | 协议权威源 | `core/通用研发协议.md` |
-| 记录 commit | 本次结构重组提交后的 `git rev-parse HEAD`（回填）｜上一基线 `28470f9`（旧 coze-guide） |
-| 结构版本 | 本仓库重组为「五层结构」（core/workflows/checklists/templates/references + INDEX/VERSION/工作习惯/规范验证）所在 commit |
+| 记录 commit | `82d56c8`（结构重组提交）｜上一基线 `28470f9`（旧 coze-guize） |
+| 结构版本 | 本仓库重组为「五层结构」（core/workflows/checklists/templates/references + INDEX/VERSION/工作习惯/规范验证）所在 commit：`82d56c8` |
 
 > 每次结构性变更、协议条款调整、文件迁移后，在此记录新 commit，并同步 `INDEX.md` 中的引用路径与 `AGENTS.md` 目录树。
 
@@ -62,4 +62,5 @@ core/通用研发协议.md  ◄── 权威源
 
 | 日期 | commit | 变更内容 | 影响 | 
 |---|---|---|---|
-| <本次> | <本批结构重组提交后回填> | 旧 `coze-guide` 内容重组为 `coze-guize-V1` 五层结构（上一基线 `28470f9`） | 见本文件「文件依赖关系」 |
+| <本次-仓库名统一> | <本批提交后回填> | 统一全仓仓库名：`coze-guide`（拼写错误）与作为接入对象的 `coze-guize` 一律改为 `coze-guize-V1`（仅保留"旧 coze-guize"对比说明） | `AGENTS.md`/`VERSION.md`/`references/官方依据.md`/`templates/项目接入.md`，见「文件依赖关系」 |
+| <本次-结构重组> | `82d56c8` | 旧 `coze-guize` 内容重组为 `coze-guize-V1` 五层结构（上一基线 `28470f9`） | 见本文件「文件依赖关系」 |

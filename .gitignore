@@ -97,16 +97,6 @@ assets/
 *.xlsx
 *.csv
 
-# 截图 / 图片 / 临时附件一律不进 git（长期约束，含未 push 历史，遗漏务必补记）
-assets/
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.webp
-*.svg
-*.bmp
-
 # 计划文档例外（不随规范入库）
 !.cozeproj/reduction/
 
@@ -115,11 +105,3 @@ assets/
 
 # CodeGraph index
 .codegraph
-
-# 本地截图 / 临时附件（不进仓库，见协议「版本控制」纪律）
-assets/
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.webp
